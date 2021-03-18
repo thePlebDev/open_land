@@ -19,12 +19,18 @@ const Input = styled.input`
 const InputContainer = styled.div`
   height:45px;
   position:relative;
-  width:70%;
+  width:60%;
+  @media only screen and (min-width: 920px) {
+  width:80%;
+};
 `
 
 const FormContainer = styled.form`
   display:flex;
   width:100%;
+  @media only screen and (min-width: 920px) {
+  width:40%;
+};
 `
 
 const SearchIconContainer = styled.div`

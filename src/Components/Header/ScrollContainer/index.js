@@ -9,17 +9,17 @@ const Container = styled.div`
   font-weight:500;
   font-family: 'Roboto';
   width:100%;
-
   padding:10px 0;
+
   display:flex;
   align-items:center;
   overflow-x:auto;
+
   white-space:nowrap;
   border:1px solid rgb(229, 232, 235);
 
 `
 
-//  border:1px solid rgb(229, 232, 235);
 const data = ["New","Art","Domain Names","Virtual Worlds","Trading Cards","Collectibles","Sports","Utility"]
 
 const ListItems = styled.div`

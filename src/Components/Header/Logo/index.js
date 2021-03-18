@@ -22,6 +22,24 @@ const ArrowLogo = styled(LogoContainer)`
   transition:all 0.3s;
 
   transform:${({state})=>state?'rotate(0deg)':'rotate(180deg)'};
+
+  @media only screen and (min-width: 920px) {
+  display:none;
+};
+`
+
+const TextLogo = styled(LogoContainer)`
+  margin-top:20px;
+  margin-right:10px;
+  color:${({theme})=>theme.colors.main};
+  letter-spacing:1px;
+  font-size:20px;
+  font-weight:600;
+  font-family:Roboto;
+  display:none;
+  @media only screen and (min-width: 920px) {
+  display:block;
+};
 `
 
 
@@ -49,6 +67,7 @@ const Logo = ({modalActionCreator})=>{
       <ArrowLogo state={clicked} onClick={()=>{handleClick()}}>
         <ExpandLessIcon style={{color:'rgb(32, 129, 226)'}}/>
       </ArrowLogo>
+      <TextLogo>OpenLand</TextLogo>
     </Container>
   )
 }

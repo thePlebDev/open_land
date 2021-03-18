@@ -7,6 +7,7 @@ import Logo from './Logo'
 import Form from './Form';
 import MobileMenu from '../Mobile/MobileMenu';
 import ScrollContainer from './ScrollContainer'
+import TextLinks from './TextLinks'
 
 
 const Container = styled.div`
@@ -17,7 +18,6 @@ const Container = styled.div`
   box-shadow:rgb(47 63 78 / 25%) 0px 0px 8px 0px;
   display:flex;
 `
-
 
 const HeaderContainer = styled.div`
 padding-bottom:30px;
@@ -30,6 +30,7 @@ const Header =({show})=>{
       <Container>
         <Logo/>
         <Form/>
+        <TextLinks/>
       </Container>
       <ScrollContainer/>
       <MobileMenu/>
