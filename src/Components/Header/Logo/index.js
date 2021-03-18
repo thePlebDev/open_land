@@ -1,8 +1,10 @@
 import React,{useState} from 'react'
 import styled from 'styled-components'
+import {connect} from 'react-redux'
 
 import FilterHdrIcon from '@material-ui/icons/FilterHdr';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
+import modalActionCreator from '../../../ActionCreators'
 
 const Container = styled.div`
   display:flex;
@@ -19,7 +21,7 @@ const LogoContainer = styled.div`
 const ArrowLogo = styled(LogoContainer)`
   transition:all 0.3s;
 
-  transform:${({state})=>state?'rotate(180deg)':'rotate(0deg)'};
+  transform:${({state})=>state?'rotate(0deg)':'rotate(180deg)'};
 `
 
 
@@ -30,20 +32,32 @@ const MountainLogo = styled(LogoContainer)`
 `
 
 
-const Logo = ()=>{
-  const [clicked,setClicked] = useState(false)
+const Logo = ({modalActionCreator})=>{
+  const [clicked,setClicked] = useState(true)
+
+  const handleClick =()=>{
+    setClicked(!clicked)
+    //console.log("THIS IS CLICKED --->" + clicked)
+    modalActionCreator(clicked)
+  }
 
   return(
     <Container>
       <MountainLogo>
         <FilterHdrIcon style={{color:'rgb(32, 129, 226)',fontSize:'25px'}}/>
       </MountainLogo>
-      <ArrowLogo state={clicked} onClick={()=>{setClicked(!clicked)}}>
+      <ArrowLogo state={clicked} onClick={()=>{handleClick()}}>
         <ExpandLessIcon style={{color:'rgb(32, 129, 226)'}}/>
       </ArrowLogo>
-
     </Container>
   )
 }
 
-export default Logo
+
+const mapDispatchToProps ={
+  modalActionCreator
+}
+
+
+const ConnectedLogo = connect(null,mapDispatchToProps)(Logo)
+export default ConnectedLogo

@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
+import {connect} from 'react-redux'
+
 
 import Logo from './Logo'
 import Form from './Form';
@@ -15,7 +17,7 @@ const Container = styled.div`
 `
 
 
-const Header =()=>{
+const Header =({show})=>{
 
   return(
     <>
@@ -23,10 +25,24 @@ const Header =()=>{
         <Logo/>
         <Form/>
       </Container>
-      <h1>modal here need redux</h1>
+      {
+        show
+          ?
+        <h1>modal here need redux</h1>
+          :
+        <h1>NOT HERE</h1>
+      }
     </>
   )
 }
 
+const mapStateToProps=(state)=>{
+  return{
+    show:state.modalReducer.show
+  }
+}
 
-export default Header
+const ConnectedHeader = connect(mapStateToProps)(Header)
+
+
+export default ConnectedHeader

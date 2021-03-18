@@ -9,6 +9,9 @@ const modalReducer = (state=initialState,action)=>{
     case types.modalShow:{
       return{...state,show:true}
     }
+    case types.modalHide:{
+      return{...state,show:false}
+    }
 
     default:
     return state
