@@ -5,6 +5,8 @@ import {connect} from 'react-redux'
 
 import Logo from './Logo'
 import Form from './Form';
+import MobileMenu from '../Mobile/MobileMenu';
+import ScrollContainer from './ScrollContainer'
 
 
 const Container = styled.div`
@@ -17,22 +19,22 @@ const Container = styled.div`
 `
 
 
-const Header =({show})=>{
+const HeaderContainer = styled.div`
+padding-bottom:30px;
+`
 
+
+const Header =({show})=>{
   return(
-    <>
+    <HeaderContainer>
       <Container>
         <Logo/>
         <Form/>
       </Container>
-      {
-        show
-          ?
-        <h1>modal here need redux</h1>
-          :
-        <h1>NOT HERE</h1>
-      }
-    </>
+      <ScrollContainer/>
+      <MobileMenu/>
+
+    </HeaderContainer>
   )
 }
 
