@@ -1,6 +1,10 @@
 const types={
   modalShow:'SHOW',
-  modalHide:'HIDE'
+  modalHide:'HIDE',
+  
+  modalHelp:"HELP",
+  modalCreate:"CREATE",
+  modalProfile:"PROFILE"
 }
 
 

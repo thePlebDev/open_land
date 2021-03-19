@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  position:sticky;
-
   color:rgba(0,0,0,.87);
   font-size:14px;
   font-weight:500;
@@ -27,9 +25,12 @@ const ListItems = styled.div`
   height:100%;
   padding:2px 20px;
   margin:auto;
+  border-bottom:1px solid white;
+
+  &:hover{
+    border-bottom:1px solid red;
+  }
 `
-
-
 
 
 const ScrollContainer =()=>{
@@ -38,7 +39,7 @@ const ScrollContainer =()=>{
     <Container>
         {
           data.map((item,index)=>{
-            return<ListItems>{item}</ListItems>
+            return<ListItems key={index}>{item}</ListItems>
           })
         }
     </Container>

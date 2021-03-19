@@ -19,7 +19,7 @@ const Input = styled.input`
 const InputContainer = styled.div`
   height:45px;
   position:relative;
-  width:60%;
+  width:50%;
   @media only screen and (min-width: 920px) {
   width:80%;
 };
@@ -27,7 +27,7 @@ const InputContainer = styled.div`
 
 const FormContainer = styled.form`
   display:flex;
-  width:100%;
+  width:90%;
   @media only screen and (min-width: 920px) {
   width:40%;
 };
