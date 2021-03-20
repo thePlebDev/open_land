@@ -1,10 +1,12 @@
 import React from 'react';
 
+import AutomatedScroller from '../AutomatedScroller'
+
 
 const Home =()=>{
 
   return(
-    <h1>THIS IS THE HOME PAGE</h1>
+    <AutomatedScroller/>
   )
 }
 
