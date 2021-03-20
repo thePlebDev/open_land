@@ -7,21 +7,35 @@ const Container = styled.div`
   flex-direction:column;
   position:absolute;
   transition:${({transition})=>transition ? 'all 0.35s' : 'none'};
-  top:${({state})=>`${state}px`}
+  top:${({state})=>`${state}px`};
+  @media only screen and (min-width: 720px) {
+  top:0;
+  flex-direction:row;
+  left:${({left})=>`${left}px`};
+}
 `
 const Image = styled.img`
-  height:200px;
-  width:287px;
+  height:135px;
+  width:276px;
+  box-shadow:rgb(0 0 0 / 30%) 1px 2px 4px;
+  margin:30px 0;
+  border-radius:4px;
+
+  @media only screen and (min-width: 720px) {
+  margin-left:20px;
+  margin-right:20px;
+  width:320px;
+  height:239;
+}
 `
 
 
 const Slide =({images,state,transition})=>{
-  if(state === 3){
-    //console.log('send the action creators')
-  }
+
+
   return(
 
-    <Container state={state * -200} transition={transition}>
+    <Container state={state * -195} transition={transition} left={state * -360}>
       {
         images.map((item,index,)=>{
           return<Image src={item} key={index} alt="future robot" />

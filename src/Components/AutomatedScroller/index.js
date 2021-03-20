@@ -7,11 +7,17 @@ import Slide from './Slide'
 
 const Container = styled.div`
   position:relative;
-  width:287px;
-  height:200px;
+  width:276px;
+  height:195px;
   margin:0 auto;
   display:flex;
   overflow:hidden;
+
+  @media only screen and (min-width: 720px) {
+  width:340px;
+  height:239;
+
+}
 `
 const images =[
   'https://images.unsplash.com/photo-1513049560516-4924f003b501?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1679&q=80',
@@ -26,13 +32,13 @@ const AutomatedScroller = ({increment,decrement,infiniteFalse,state})=>{
   useEffect(()=>{
     const interval = setInterval(()=>{
       increment()
-    },2000)
+    },4000)
     return()=> clearInterval(interval);
   },[increment])
 
   useEffect(()=>{
     if(state===3){
-      
+
     }
   },[state,infiniteFalse])
 
