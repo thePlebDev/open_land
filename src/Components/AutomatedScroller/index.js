@@ -18,6 +18,11 @@ const Container = styled.div`
   height:239;
 
 }
+@media only screen and (min-width: 1200px) {
+width:640px;
+height:350px;
+
+}
 `
 const images =[
   'https://images.unsplash.com/photo-1513049560516-4924f003b501?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1679&q=80',

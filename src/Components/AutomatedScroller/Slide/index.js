@@ -2,6 +2,8 @@ import React,{useEffect} from 'react';
 import styled from 'styled-components';
 import {connect} from 'react-redux';
 
+import Image from '../ImageContainer';
+
 const Container = styled.div`
   display:flex;
   flex-direction:column;
@@ -13,21 +15,14 @@ const Container = styled.div`
   flex-direction:row;
   left:${({left})=>`${left}px`};
 }
-`
-const Image = styled.img`
-  height:135px;
-  width:276px;
-  box-shadow:rgb(0 0 0 / 30%) 1px 2px 4px;
-  margin:30px 0;
-  border-radius:4px;
 
-  @media only screen and (min-width: 720px) {
-  margin-left:20px;
-  margin-right:20px;
-  width:320px;
-  height:239;
+@media only screen and (min-width: 1200px) {
+  width:587px;
+  height:286px;
+  left:${({leftLarge})=>`${leftLarge}px`};
 }
 `
+
 
 
 const Slide =({images,state,transition})=>{
@@ -35,10 +30,10 @@ const Slide =({images,state,transition})=>{
 
   return(
 
-    <Container state={state * -195} transition={transition} left={state * -360}>
+    <Container state={state * -195} transition={transition} left={state * -360} leftLarge={state * -687}>
       {
         images.map((item,index,)=>{
-          return<Image src={item} key={index} alt="future robot" />
+          return<Image image={item} key={index} alt="future robot" />
         })
       }
     </Container>
