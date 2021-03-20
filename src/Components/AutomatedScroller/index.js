@@ -54,8 +54,6 @@ const AutomatedScroller = ({increment,decrement,infiniteFalse,state})=>{
       <Container>
         <Slide images={images} />
       </Container>
-      <button onClick={()=>{increment()}}>NEXT</button>
-      <button onClick={()=>{decrement()}}>previous</button>
     </>
   )
 }
