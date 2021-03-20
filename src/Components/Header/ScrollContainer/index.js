@@ -8,13 +8,13 @@ const Container = styled.div`
   font-family: 'Roboto';
   width:100%;
   padding:10px 0;
-
   display:flex;
   align-items:center;
   overflow-x:auto;
-
+  z-index:1;
   white-space:nowrap;
   border:1px solid rgb(229, 232, 235);
+
 
 `
 
