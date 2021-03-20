@@ -5,7 +5,7 @@ import AutomatedScroller from '../AutomatedScroller'
 import HomeImage from '../HomeImage';
 
 const Container = styled.div`
-  max-width:1470px;
+  max-width:1500px;
   margin:0 auto;
 
 `

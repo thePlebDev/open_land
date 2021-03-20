@@ -21,7 +21,7 @@ const Container = styled.div`
 `
 
 const HeaderContainer = styled.div`
-padding-bottom:30px;
+
 `
 
 
