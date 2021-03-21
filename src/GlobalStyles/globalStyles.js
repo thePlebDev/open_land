@@ -5,6 +5,8 @@ const GlobalStyle = createGlobalStyle`
   html{
     height:100%;
     overflow-x:hidden;
+    padding:0;
+    margin:0;
   }
 
   *{

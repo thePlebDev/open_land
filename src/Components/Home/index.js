@@ -7,7 +7,8 @@ import BathtubIcon from '@material-ui/icons/Bathtub';
 
 import AutomatedScroller from '../AutomatedScroller'
 import HomeImage from '../HomeImage';
-import ItemScroller from '../ItemScrollers'
+import ItemScroller from '../ItemScrollers';
+import Footer from '../Footer'
 
 
 const Container = styled.div`
@@ -33,6 +34,7 @@ const Home =()=>{
         <ItemScroller title="Virtual worlds" icon={<PublicIcon/>}/>
         <ItemScroller title="collectibles" icon={<BathtubIcon/>}/>
       </BodyContainer>
+      <Footer/>
     </Container>
   )
 }
