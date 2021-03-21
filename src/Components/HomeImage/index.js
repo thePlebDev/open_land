@@ -6,6 +6,7 @@ import HomePageButton from '../Buttons/HomepageButtons'
 const Container = styled.div`
   width:100%;
   height:400px;
+  margin-top:117px;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -36,7 +37,7 @@ const SecondText = styled.h2`
   margin: 20px auto 25px;
   font-size:18px;
   font-family:"Roboto";
-  color:rgb(14,14,14);
+  color:white;
   opacity:0.7;
   text-align:center;
 `

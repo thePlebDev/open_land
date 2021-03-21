@@ -18,10 +18,15 @@ const Container = styled.div`
   display:flex;
   z-index:9;
 
+
 `
 
 const HeaderContainer = styled.div`
-
+  position:fixed;
+  top:0;
+  width:100%;
+  background-color:white;
+  z-index:99999;
 `
 
 
@@ -35,7 +40,6 @@ const Header =({show})=>{
       </Container>
       <ScrollContainer/>
       <MobileMenu/>
-
     </HeaderContainer>
   )
 }

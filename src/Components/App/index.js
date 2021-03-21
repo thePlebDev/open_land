@@ -8,13 +8,13 @@ import Header from '../Header'
 
 const App =()=>{
   return(
-    <>
+    <div>
     <Header/>
     <Switch>
       <Route path="/" exact component={Home} />
 
     </Switch>
-    </>
+    </div>
   )
 }
 

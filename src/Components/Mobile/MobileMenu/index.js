@@ -14,7 +14,8 @@ const Container = styled.div`
   display:flex;
   flex-direction:column;
   align-items:center;
-  overflow:hidden;
+  overflow-x:hidden;
+  z-index:99999999999999999999;
 
 `
 
