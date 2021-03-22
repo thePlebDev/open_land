@@ -11,10 +11,11 @@ const Container = styled.div`
   position:fixed;
   width:100vw;
   right:${({state})=>state ?'-0vw':'-100vw'};
-  height:100%;
+  height:${({show})=>show ? '100%' : '1%'};
   transition:height 0.5s, right 0.35s;
-  background-color:white;
 
+  background-color:white;
+  opacity:${({show})=>show ? 1 : 0};
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -52,15 +53,14 @@ const Links = styled.div`
 
 
 
-const SecondMenu =({showMenu,data,hideSecond})=>{
-  console.log(hideSecond)
+const SecondMenu =({showMenu,data,hideSecond,title,show})=>{
 
 
   return(
-    <Container state={showMenu}>
+    <Container state={showMenu} show={show}>
         <TitleContainer onClick={()=>hideSecond()}>
           <ArrowBackIosIcon style={{fontSize:"16px",marginLeft:'15px'}}/>
-          <div>Community</div>
+          <div>{title}</div>
         </TitleContainer>
         <LinksContainer>
             {
@@ -77,7 +77,9 @@ const SecondMenu =({showMenu,data,hideSecond})=>{
 const mapStateToProps =(state)=>{
   return{
     showMenu:state.mobileMenuReducer.showSecond,
-    data:state.mobileMenuReducer.data
+    data:state.mobileMenuReducer.data,
+    title:state.mobileMenuReducer.title,
+    show:state.modalReducer.show
   }
 }
 

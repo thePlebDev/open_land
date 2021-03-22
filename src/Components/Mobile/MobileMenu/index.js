@@ -10,7 +10,7 @@ const Container = styled.div`
   width:100vw;
   opacity:${({state})=>state ? 1 : 0};
   height:${({state})=>state ? '100%' : '1%'};
-  transition:height 0.5s,opacity 0.20s;
+  transition:height 0.5s;
   background-color:white;
   display:flex;
   flex-direction:column;
