@@ -8,7 +8,13 @@ const types={
 
   increment:"INCREMENT",
   decrement:"DECREMENT",
-  false:"FALSE"
+  false:"FALSE",
+
+  //MOBILE MENUE
+  showHelp:"SHOWHELP",
+  showCreate:"SHOWCREATE",
+  showAccount:"SHOWACCOUNT",
+  hideSecond:"HIDESECOND"
 }
 
 

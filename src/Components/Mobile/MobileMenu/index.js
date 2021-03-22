@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import {connect} from 'react-redux'
 
 import MobileLinks from '../MobileLinks'
+import SecondMenu from '../SecondMenu';
 
 const Container = styled.div`
   position:fixed;
@@ -10,12 +11,15 @@ const Container = styled.div`
   opacity:${({state})=>state ? 1 : 0};
   height:${({state})=>state ? '100%' : '1%'};
   transition:height 0.5s,opacity 0.20s;
-  background-color:${({theme})=>theme.colors.main};
+  background-color:white;
   display:flex;
   flex-direction:column;
   align-items:center;
   overflow-x:hidden;
-  z-index:99999999999999999999;
+  z-index:10;
+  @media only screen and (min-width: 920px) {
+    display:none;
+}
 
 `
 
@@ -23,9 +27,12 @@ const Container = styled.div`
 const MobileMenu =({show})=>{
 
   return(
+    <>
     <Container state={show}>
       <MobileLinks/>
     </Container>
+    <SecondMenu/>
+    </>
   )
 }
 
